@@ -18,7 +18,6 @@ class WeatherService {
     Function(dynamic error) onError,
   }) {
     final url = '$baseUrl/weather?q=$city&lang=en&$apiKey';
-    //print(url);
 
     ApiRepository(url: '$url', payload: null).get(
         beforeSend: () => {
@@ -33,7 +32,6 @@ class WeatherService {
         onError: (error) => {
               if (onError != null)
                 {
-                  print('this is ApiRepositoryError'),
                   print(error),
                   onError(error),
                 }

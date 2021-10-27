@@ -19,7 +19,6 @@ class HomeController extends GetxController {
   @override
   void onInit() {
     initState();
-    // getTopFiveCities();
     getFiveDailyData();
     super.onInit();
   }
@@ -46,35 +45,19 @@ class HomeController extends GetxController {
             });
   }
 
-  // void getTopFiveCities() {
-  //   List<String> cities = ['London', 'New York', 'Paris', 'Moscow', 'Tokyo'];
-  //   cities.forEach((c) {
-  //     WeatherService(city: '$c').getCurrentWeatherData(onSuccess: (data) {
-  //       dataList.add(data);
-  //       update();
-  //     }, onError: (error) {
-  //       print(error);
-  //       update();
-  //     });
-  //   });
-  // }
-
   void getFiveDaysData() {
     WeatherService(city: '$city').getFiveDaysThreeHoursForcastData(
         onSuccess: (data) {
       fiveDaysData = data;
-      print(data);
       update();
     }, onError: (error) {
       print(error);
-      update();
     });
   }
 
   void getFiveDailyData() {
     WeatherService(city: '$city').getFiveDailyWeather(onSuccess: (data) {
       fiveDailyWeather = data;
-      print(data);
       update();
     }, onError: (error) {
       print(error);

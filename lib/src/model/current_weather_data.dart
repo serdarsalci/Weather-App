@@ -28,7 +28,6 @@ class CurrentWeatherData {
       return CurrentWeatherData();
     }
     var _icon = json['weather'][0]['icon'];
-    print(_icon);
 
     return CurrentWeatherData(
         weather: (json['weather'] as List)

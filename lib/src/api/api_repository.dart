@@ -15,7 +15,7 @@ class ApiRepository {
     Function(dynamic error) onError,
   }) {
     _dio.get(this.url, queryParameters: this.payload).then((response) {
-      print(response.statusMessage);
+      // print(response.statusMessage);
       if (onSuccess != null) {
         onSuccess(response.data);
       }
