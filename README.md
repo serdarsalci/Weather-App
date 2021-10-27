@@ -10,16 +10,17 @@
 flutter pub get
 ```
 
+## Features
+Current temperature, max and min temperature, 
+Custom icons for each weather condition
+5 day forecast
+Line graph to show temperature variance
+
+
+
 ## Author
 
 👤 **Serdar**
 
 - Github: [@serdarsalci](https://github.com/serdarsalci)
 
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
----
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
